@@ -8,7 +8,6 @@ public class BookClass{
     private String[] genres;
     private String bookID;
 
-    //Now we set getters and setters. We could avoid this by not making attributes private, but this mantains data integrity (and is more fun).
     public String getTitle(){ return title;}
     public String getAuthor(){ return author;}
     public String[] getGenres(){ return genres;} 
