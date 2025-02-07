@@ -1,3 +1,7 @@
+/*
+This file contains the Book class. Its attributes are the title, author and genres of the book, and a bookID
+that will serve as an identifier for the bookstore, specifically for the shopping cart. Each attribute has a get and set method.
+*/
 public class BookClass{
     private String title;
     private String author;

@@ -1,3 +1,9 @@
+/*
+This is the main file of the project. In it we can find all of the methods needed to navigate the bookstore 
+such as adding/removing books, browsing them by title/author/genres, go to checkout, and display navigation 
+menu of the bookstore.
+*/
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Arrays;
@@ -5,26 +11,21 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Bookstore{
-    /*
-    In this class we will write the code for the shopping part of the project./*
-    This includes adding to shopping cart and complete checkout process.
-    */
+    //Global scanner for efficiency and avoiding errors
     static Scanner scanner = new Scanner(System.in);
-    
+    //allBooks is where we will store all book data using BookDatabaseReader.java file
     static ArrayList<BookClass> allBooks = new ArrayList<>();
-
+    //shoppingCart serves as the shopping cart the user handles
     static ArrayList<String> shoppingCart = new ArrayList<>();
 
     public static void main(String args[]){
-        BookDatabaseReader.main(args);
+        BookDatabaseReader.main(args);  //We first read book data and store it in allBooks.
         allBooks = BookDatabaseReader.getAllBooks();
 
-        int userSelection = showOptionsMenu();
-        optionsSwitch(userSelection);
+        int userSelection = showOptionsMenu();  //We then show the options menu to the user and he chooses one of the options using an integer
+        optionsSwitch(userSelection);   //Use the switch method to run method respective to user selection
 
-        
         return;
-
     }
 
 
@@ -197,7 +198,6 @@ public class Bookstore{
         return;
 
     }
-
 
     //This one is to checkout.
     static int checkout(ArrayList<String> cart){
